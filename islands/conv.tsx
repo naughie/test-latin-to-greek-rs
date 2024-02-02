@@ -193,7 +193,7 @@ export default function Conv() {
   };
 
   return (
-    <div class="container max-w-full">
+    <div class="container max-w-full mb-36">
       <div class="bg-rose-100 pt-32 pb-8">
         <Header setInput={setInput} />
         <Input value={input} onInput={onInput} />
