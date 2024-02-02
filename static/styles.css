@@ -1,3 +1,23 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+  font-family: "new-athena-unicode";
+  src: url("/fonts/newathu5_5.woff") format("woff");
+}
+
+@font-face {
+  font-family: "open-sans";
+  src: url("/fonts/opensans-regular.ttf") format("truetype");
+}
+
+body {
+  font-family: "open-sans", sans-serif;
+  font-size: 3rem;
+}
+
+.greek {
+  font-family: "new-athena-unicode", sans-serif;
+  font-size: 3rem;
+}

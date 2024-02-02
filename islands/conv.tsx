@@ -29,7 +29,7 @@ export default function Conv() {
         placeholder="a)/nqrwpo/s e)stin."
       />
 
-      <div>
+      <div class="greek">
         {greek}
       </div>
     </div>
