@@ -122,17 +122,18 @@ const Header = ({ setInput }: DetailsProps) => {
 
 type InputProps = {
   value: string;
-  onInput: (e: JSX.TargetedEvent<HTMLInputElement, Event>) => void;
+  onInput: (e: JSX.TargetedEvent<HTMLTextAreaElement, Event>) => void;
 };
 
 const Input = ({ value, onInput }: InputProps) => {
   return (
     <div class="flex justify-center mt-2">
-      <input
-        class="rounded-lg ring ring-rose-300 focus:outline-none hover:ring-pink-400 text-stone-700 placeholder-stone-400 caret-rose-500 flex-none w-3/5 h-10 px-3"
+      <textarea
+        class="rounded-lg ring ring-rose-300 focus:outline-none hover:ring-pink-400 text-stone-700 placeholder-stone-400 caret-rose-500 flex-none w-3/5 h-10 px-3 pt-2"
         value={value}
         onInput={onInput}
         placeholder="a)/nqrwpo/s e)stin."
+        rows={1}
       />
     </div>
   );
@@ -187,7 +188,7 @@ export default function Conv() {
   const greek = wasmReady ? toGreekPerLine(input) : [];
   const greekph = wasmReady ? latin_to_greek("fai/nei e)nqa/de.") : "";
 
-  const onInput = (e: JSX.TargetedEvent<HTMLInputElement, Event>) => {
+  const onInput = (e: JSX.TargetedEvent<HTMLTextAreaElement, Event>) => {
     setInput(e.currentTarget.value);
   };
 
