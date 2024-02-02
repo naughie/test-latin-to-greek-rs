@@ -5,9 +5,9 @@
     "cli": "echo \"import '\\$fresh/src/dev/cli.ts'\" | deno run --unstable -A -",
     "manifest": "deno task cli manifest $(pwd)",
     "start": "deno run -A --watch=static/,routes/ dev.ts",
-    "build": "deno task wasmbuild --out ./static && deno run -A dev.ts build",
+    "build": "deno task wasmbuild && deno run -A dev.ts build",
     "preview": "deno run -A main.ts",
-    "wasmbuild": "deno run -A https://deno.land/x/wasmbuild@0.15.6/main.ts",
+    "wasmbuild": "deno run -A https://deno.land/x/wasmbuild@0.15.6/main.ts --out ./static",
     "update": "deno run -A -r https://fresh.deno.dev/update ."
   },
   "lint": {
