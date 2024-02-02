@@ -11,9 +11,17 @@
   font-family: "open-sans";
   src: url("/fonts/opensans-regular.ttf") format("truetype");
 }
+@font-face {
+  font-family: "open-sans-extrabold";
+  src: url("/fonts/opensans-extrabold.ttf") format("truetype");
+}
 
 body {
   font-family: "open-sans", sans-serif;
+}
+
+.extrabold {
+  font-family: "open-sans-extrabold", sans-serif;
 }
 
 .greek {
