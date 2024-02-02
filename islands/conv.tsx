@@ -12,7 +12,7 @@ const Input = ({ value, onInput }: InputProps) => {
   return (
     <div class="flex justify-center">
       <input
-        class="rounded-lg ring ring-rose-300 flex-none w-3/5 h-10 px-3"
+        class="rounded-lg ring ring-rose-300 focus:outline-none hover:ring-pink-400 text-stone-700 placeholder-stone-400 flex-none w-3/5 h-10 px-3"
         value={value}
         onInput={onInput}
         placeholder="a)/nqrwpo/s e)stin."
