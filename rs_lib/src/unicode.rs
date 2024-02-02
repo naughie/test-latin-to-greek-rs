@@ -5,3 +5,5 @@ pub use vowel::*;
 
 mod consonant;
 pub use consonant::*;
+
+pub const KORONIS: &str = "\u{1fbd}";

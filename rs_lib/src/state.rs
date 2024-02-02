@@ -28,6 +28,7 @@ pub enum State {
     Chi(Case),
     Psi(Case),
     Omega(Case, Breathing, Accent, Subscript),
+    Koronis,
 }
 
 fn transit(state: State, c: u8) -> State {
@@ -116,6 +117,8 @@ fn transit(state: State, c: u8) -> State {
         b'=' => toggle_circumflex(state),
         b'|' => toggle_iota(state),
         b'"' => toggle_diaeresis(state),
+
+        b'\'' => Koronis,
 
         _ => Initial,
     }
@@ -288,6 +291,7 @@ impl State {
             Chi(a) => uc::Chi[a],
             Psi(a) => uc::Psi[a],
             Omega(a, b, c, d) => uc::Omega[(a, b, c, d)],
+            Koronis => uc::KORONIS,
         }
     }
 

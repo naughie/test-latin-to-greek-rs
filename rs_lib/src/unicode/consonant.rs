@@ -37,7 +37,7 @@ macro_rules! impl_consonant_index {
 
 impl_consonant_index! { Beta, "\u{03b2}", "\u{0392}" }
 impl_consonant_index! { Gamma, "\u{03b3}", "\u{0393}" }
-impl_consonant_index! { Delta, "\u{02b4}", "\u{0394}" }
+impl_consonant_index! { Delta, "\u{03b4}", "\u{0394}" }
 impl_consonant_index! { Zeta, "\u{03b6}", "\u{0396}" }
 impl_consonant_index! { Theta, "\u{03b8}", "\u{0398}" }
 impl_consonant_index! { Kappa, "\u{03ba}", "\u{039a}" }
