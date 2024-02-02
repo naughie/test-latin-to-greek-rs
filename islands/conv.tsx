@@ -139,7 +139,7 @@ const Input = ({ value, onInput }: InputProps) => {
 };
 
 type OutputProps = {
-  greek: string;
+  greek: string[];
   placeholder: string;
 };
 
@@ -156,11 +156,20 @@ const Output = ({ greek, placeholder }: OutputProps) => {
     return (
       <div class="greek flex justify-center">
         <div class="text-balance overflow-x-hidden border-b border-rose-300 text-stone-700 flex-none w-3/5 px-3 pt-20">
-          {greek}
+          {greek.map((line, i) => <div key={i}>{line}</div>)}
         </div>
       </div>
     );
   }
+};
+
+const toGreekPerLine = (text: string) => {
+  if (text.length === 0) {
+    return [];
+  }
+
+  const lines = text.replaceAll("\n", "\n\0").split("\0");
+  return lines.map(latin_to_greek);
 };
 
 export default function Conv() {
@@ -175,7 +184,7 @@ export default function Conv() {
     );
   }, []);
 
-  const greek = wasmReady ? latin_to_greek(input) : "";
+  const greek = wasmReady ? toGreekPerLine(input) : [];
   const greekph = wasmReady ? latin_to_greek("fai/nei e)nqa/de.") : "";
 
   const onInput = (e: JSX.TargetedEvent<HTMLInputElement, Event>) => {
