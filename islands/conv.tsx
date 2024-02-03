@@ -154,17 +154,19 @@ type OutputProps = {
 const Output = ({ greek, placeholder }: OutputProps) => {
   if (greek.length === 0) {
     return (
-      <div class="greek flex justify-center">
+      <div class="greek line-nums flex justify-center">
         <div class="text-balance overflow-x-hidden border-b border-rose-300 text-stone-500 flex-none w-3/5 px-3 pt-20">
-          {placeholder}
+          <span class="line-num">
+            {placeholder}
+          </span>
         </div>
       </div>
     );
   } else {
     return (
-      <div class="greek flex justify-center">
+      <div class="greek line-nums flex justify-center">
         <div class="text-balance overflow-x-hidden border-b border-rose-300 text-stone-700 flex-none w-3/5 px-3 pt-20">
-          {greek.map((line, i) => <div key={i}>{line}</div>)}
+          {greek.map((line, i) => <div key={i} class="line-num">{line}</div>)}
         </div>
       </div>
     );

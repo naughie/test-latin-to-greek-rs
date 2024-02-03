@@ -27,3 +27,14 @@ body {
 .greek {
   font-family: "new-athena-unicode", sans-serif;
 }
+
+.line-nums {
+  counter-reset: lineno 0;
+}
+
+.line-num:before {
+  counter-increment: lineno 1;
+  content: counter(lineno) " ";
+  font-size: 0.75rem;
+  padding-right: 1.5rem;
+}
