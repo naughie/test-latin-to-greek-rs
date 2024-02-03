@@ -75,7 +75,14 @@ const DetailsInner = ({ hidden, setInput }: DetailsInProps) => {
           >
             here
           </button>
-          &#32; to try the first six lines of Homer's Iliad.
+          &#32; to try the first seven lines of &#32;
+          <a
+            href="http://www.perseus.tufts.edu/hopper/text?doc=Perseus:text:1999.01.0133"
+            target="_blank"
+            class="underline decoration-2 decoration-rose-500 hover:text-zinc-500 hover:decoration-pink-500"
+          >
+            Homer's Iliad
+          </a>.
         </div>
       </div>
     </div>
@@ -132,7 +139,7 @@ const Input = ({ value, onInput }: InputProps) => {
         class="rounded-lg ring ring-rose-300 focus:outline-none hover:ring-pink-400 text-stone-700 placeholder-stone-400 caret-rose-500 flex-none w-3/5 h-10 px-3 pt-2"
         value={value}
         onInput={onInput}
-        placeholder="a)/nqrwpo/s e)stin."
+        placeholder="fai/nei e)nqa/de."
         rows={1}
       />
     </div>
@@ -186,7 +193,7 @@ export default function Conv() {
   }, []);
 
   const greek = wasmReady ? toGreekPerLine(input) : [];
-  const greekph = wasmReady ? latin_to_greek("fai/nei e)nqa/de.") : "";
+  const greekph = "φαίνει ἐνθάδε.";
 
   const onInput = (e: JSX.TargetedEvent<HTMLTextAreaElement, Event>) => {
     setInput(e.currentTarget.value);
