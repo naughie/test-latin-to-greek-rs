@@ -38,7 +38,7 @@ const DetailsInner = ({ hidden, setInput }: DetailsInProps) => {
           >
             Perseus Digital Library
           </a>, except that:
-          <ul class="list-disc list-inside ml-2">
+          <ul class="marker:text-emerald-500 list-disc list-inside ml-2">
             <li>
               <span class="greek">ξ</span> (xi) = x
             </li>
